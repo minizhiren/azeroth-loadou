@@ -3,8 +3,7 @@ import { defineConfig } from "vite";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 
-const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
-  "00000000-0000-4000-8000-000000000000";
+const D1_DATABASE_ID = "e8c93af6-78b9-468c-82ed-3fda077d2196";
 
 // Keep binding names independent from the original ChatGPT Sites project.
 // Cloudflare provides these bindings through wrangler.jsonc in production.
@@ -21,8 +20,8 @@ const localBindingConfig = {
     ? [
         {
           binding: d1,
-          database_name: "site-creator-d1",
-          database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+          database_name: "azeroth-loadout-db",
+          database_id: D1_DATABASE_ID,
         },
       ]
     : [],
@@ -30,7 +29,7 @@ const localBindingConfig = {
     ? [
         {
           binding: r2,
-          bucket_name: "site-creator-r2",
+          bucket_name: "azeroth-loadout-configs",
         },
       ]
     : [],
