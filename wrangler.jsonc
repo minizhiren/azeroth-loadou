@@ -6,5 +6,18 @@
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": "dist/client"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "azeroth-loadout-db",
+      "database_id": "e8c93af6-78b9-468c-82ed-3fda077d2196"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "azeroth-loadout-configs"
+    }
+  ]
 }
